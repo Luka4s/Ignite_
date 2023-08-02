@@ -1,0 +1,199 @@
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ /* Incluir o display grid para alinhar os itens na tela de maneira mais rapida com duas colunas */ 
+    display: grid;
+    width: 30%;
+    height: 100%;
+    grid-template-areas:
+      "profile MyProject"
+      "locals  habit"
+      "tecs  habit";
+    grid-template-rows: 20rem 1fr 1fr;
+    grid-template-columns: 388px 1fr;
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.Img_User{
+    border-radius: 60px;
+    width:128px;
+    height: 128px;
+    border: 2px solid #0F0;
+    margin-top: 20px;
+}
+
+#localEdit{
+    display: flex;
+    flex-direction: row;
+}
+#icons{
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+h1{
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.6rem;
+}
+p{
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.profile{
+    grid-area: profile;
+    background: var(--bg-cards);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.20);
+    width: 348px;
+    height: 292px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 40px 0px 0px 40px;
+}
+.profile:hover{
+    box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.20);
+}
+
+.navigation{
+    grid-area: locals;
+    background: var(--bg-cards);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.20);
+    width: 348px;
+    height: 348px;
+    margin-top: 1.9rem;
+    margin-left: 40px;
+    padding: 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: row ;
+}
+.navigation:hover{
+    box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.20);
+}
+.Tecs{
+    grid-area: tecs;
+    background: var(--bg-cards);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.20);
+    width: 348px;
+    height: 210px;
+    margin-top: 1.9rem;
+    margin-left: 40px;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+}
+.Tecs:hover{
+    box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.20);
+}
+.title{
+    align-items: center;
+    text-align: start;
+    position: relative;
+    bottom: 40px;
+}
+.content_tecs{
+    align-items: center;
+    position: relative;
+    bottom: 20px;
+}
+#Bg_tecs{
+    background: var(--bg-techs);
+    border-radius: 10px;
+    width: 86px;
+    height: 24px;
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-family: Merriweather Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.li_01{
+    margin-top: 29px;
+    margin-bottom:29px;
+}
+
+.projectTitle{
+    grid-area: Myproject;
+    width: 952px;
+    height: 86px; 
+    background: var(--bg-cards);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.20);
+    margin-left: 60px;
+    margin-top: 2.7rem;
+} 
+.project_01{
+    grid-area: habit;
+    width: 461px;
+    height: 186px;
+    background: var(--bg-cards);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.20);
+    margin-left: 60px;
+    margin-top: 2.7rem;
+}
+.project_01:hover{
+    box-shadow: 6px 6px 6px 3px #E7DE79;
+}
+
+#elipse{
+    width: 15px;
+    height: 15px;
+    color: #5694af;
+}
+
+.project_02{
+    position: relative;
+    left: 500px;
+    bottom: 229px;
+    grid-area: habit;
+    width: 461px;
+    height: 186px;
+    background: var(--bg-cards);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.20);
+    margin-left: 60px;
+    margin-top: 2.7rem;
+} 
+.project_02:hover{
+    box-shadow: 6px 6px 6px 3px #5694af;
+}
+
+@media (max-width:760px){
+    html{
+        font-size: 87.5%;
+    }
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
